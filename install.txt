@@ -1,0 +1,9 @@
+Cara Install Metasploit Di Termux
+
+$ pkg install unstable-repo
+$ pkg install metasploit
+
+
+Install Metasploit Di Kali Linux
+
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
